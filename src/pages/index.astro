@@ -1,11 +1,84 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import Header from '#components/Header.astro';
+import { Person } from 'radix-svelte-icons';
 import Layout from '../layouts/Layout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Radweh">
+	<Header></Header>
+	<div class="flex flex-col h-screen gap-8 bg-base-100 text-base-content pt-48 pb-28 px-28 relative">
+		<img src="/image.webp" alt="" class="h-[100%] object-cover">
+		<div class="absolute top-60 left-40">
+			<h1 class="text-8xl font-bold text-white">Radweh</h1>
+			<p class="text-2xl max-w-[65%] text-white text-opacity-75">The longing or deep desire to go cycling again, much like "Fernweh" describes the yearning to go travel.</p>
+		</div>
+	</div>
+	<div class="absolute top-36 left-16 flex items-center justify-center">
+		<div class="w-12 h-0.5 bg-base-content absolute"></div>
+		<div class="w-0.5 h-12 bg-base-content absolute"></div>
+	</div>
+	<div class="absolute top-36 right-16 flex items-center justify-center">
+		<div class="w-12 h-0.5 bg-base-content absolute"></div>
+		<div class="w-0.5 h-12 bg-base-content absolute"></div>
+	</div>
+	<div class="absolute bottom-16 left-16 flex items-center justify-center">
+		<div class="w-12 h-0.5 bg-base-content absolute"></div>
+		<div class="w-0.5 h-12 bg-base-content absolute"></div>
+	</div>
+	<div class="absolute bottom-16 right-16 flex items-center justify-center">
+		<div class="w-12 h-0.5 bg-base-content absolute"></div>
+		<div class="w-0.5 h-12 bg-base-content absolute"></div>
+	</div>
+	<div class="grid grid-cols-2 gap-8 px-28 py-16">
+		<div class="flex flex-col gap-8">
+			<h2 class="text-5xl font-medium">Challenges</h2>
+			<div class="rounded-lg border border-base-300 bg-base-200 px-12 py-8 flex flex-row gap-8 relative overflow-hidden hover:bg-base-300 cursor-pointer transition-colors">
+				<img src="/badges/trailblazer.png" class="absolute -top-12 -right-16 rotate-[15deg] w-64 opacity-35">
+				<img src="/icons/mountainbike.svg" class="w-16">
+				<div class="flex flex-col gap-2 z-10">
+					<h4 class="text-xl font-semibold">Conquer the Trails - 50km Mountain Biking</h4>
+					<p class="text-base-content text-opacity-75 max-w-[80%]">Tackle rugged terrains and ride 50km on mountain trails this week to earn the "Trailblazer" badge and showcase your off-road skills.</p>
+				</div>
+			</div>
+			<div class="rounded-lg border border-base-300 bg-base-200 px-12 py-8 flex flex-row gap-8 relative overflow-hidden hover:bg-base-300 cursor-pointer transition-colors">
+				<img src="/badges/summit-seeker.png" class="absolute -top-12 -right-16 rotate-[-8deg] w-64 opacity-35">
+				<img src="/icons/mountainbike.svg" class="w-16">
+				<div class="flex flex-col gap-2 z-10">
+					<h4 class="text-xl font-semibold">Summit Seeker - 1000m Climb</h4>
+					<p class="text-base-content text-opacity-75 max-w-[80%]">Test your strength and climb 1000m in elevation this week to earn the "Summit Seeker" badge and share your ascent with the community!</p>
+				</div>
+			</div>
+		</div>
+		<div class="flex flex-col gap-8">
+			<h2 class="text-5xl font-medium">Events</h2>
+			<div class="grid grid-cols-2 gap-8">
+				<div class="rounded-lg border border-base-300 bg-base-200 flex flex-col relative overflow-hidden hover:bg-base-300 cursor-pointer transition-colors">
+					<img src="/sunset-ride.jpg" class="w-full max-h-[50%] object-cover">
+					<div class="px-6 py-6">
+						<div class="flex flex-row gap-2 mb-2">
+							<span class="bg-primary text-white font-bold px-2.5 py-0.5 rounded-full text-xs flex flex-row gap-1 items-center"><Person size={12}></Person> 24 / 50</span>
+							<span class="bg-secondary text-white font-bold px-2.5 py-0.5 rounded-full text-xs">30km</span>
+						</div>
+						<h4 class="text-xl font-semibold">Sunrise Ride & Coffee</h4>
+						<p class="text-base-content text-opacity-75 mb-2">Start your day with a peaceful ride as the sun rises, followed by a coffee stop with fellow cyclists.</p>
+						<span class="font-semibold">Next Saturday at 5:30 AM</span>
+					</div>
+				</div>
+				<div class="rounded-lg border border-base-300 bg-base-200 flex flex-col relative overflow-hidden hover:bg-base-300 cursor-pointer transition-colors">
+					<img src="/mountainbiking.webp" class="w-full max-h-[50%] object-cover">
+					<div class="px-6 py-6">
+						<div class="flex flex-row gap-2 mb-2">
+							<span class="bg-secondary text-white font-bold px-2.5 py-0.5 rounded-full text-xs">50km</span>
+						</div>
+						<h4 class="text-xl font-semibold">Mountain Madness</h4>
+						<p class="text-base-content text-opacity-75 mb-2">Tackle a challenging mountain trail and test your climbing skills. Suitable for experienced riders.</p>
+						<span class="font-semibold">Next Sunday at 8:00 AM</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </Layout>

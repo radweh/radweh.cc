@@ -1,0 +1,20 @@
+---
+import ThemeController from "./ThemeController.svelte";
+
+const lightTheme = Astro.cookies.get("theme")?.value === "light";
+---
+
+
+<header class="fixed top-0 left-0 w-screen px-36 py-4 z-10 bg-base-100">
+	<div class="mx-auto flex flex-row justify-between">
+		<img src="/favicon.svg" alt="" class="w-12">
+		<div class="flex flex-row gap-12 items-center">
+			<a href="" class="font-medium text-lg text-base-content text-opacity-85 tracking-wide hover:text-opacity-100">Challenges</a>
+			<a href="" class="font-medium text-lg text-base-content text-opacity-85 tracking-wide hover:text-opacity-100">Events</a>
+			<a href="" class="font-medium text-lg text-base-content text-opacity-85 tracking-wide hover:text-opacity-100">Routes</a>
+			<a href="" class="font-medium text-lg text-base-content text-opacity-85 tracking-wide hover:text-opacity-100">Stories</a>
+			<a href="" class="font-medium text-lg text-base-content text-opacity-85 tracking-wide hover:text-opacity-100">Gallery</a>
+			<ThemeController client:load {lightTheme}></ThemeController>
+		</div>
+	</div>
+</header>
