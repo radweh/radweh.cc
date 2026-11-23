@@ -1,0 +1,32 @@
+---
+import Layout from "#layouts/Layout.astro";
+import { MixerHorizontal } from "radix-svelte-icons";
+import ChallengeBanner from "#components/ChallengeBanner.svelte"
+
+---
+
+<Layout title="Challenges">
+	<div class="relative lg:pt-12 pt-6 pb-32 lg:pb-56 lg:px-14 px-4">
+		<img src="/image.webp" class="h-full absolute top-0 left-0 w-full object-cover">
+		<div class="relative z-10">
+			<h1 class="text-5xl lg:text-8xl font-bold text-white">Challenges</h1>
+			<p class="text-2xl lg:max-w-[65%] text-white text-opacity-75 mt-4">Compete in daunting challenges for reputation and exclusive badges while training at the same time.</p>
+		</div>
+	</div>
+
+	<div class="grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-8">
+		<div class="grid grid-cols-1 gap-8 order-2 lg:order-1">
+			<ChallengeBanner badge="/badges/trailblazer.png" icon="/icons/mountainbike.svg" title="Conquer the Trails - 50km Mountain Biking" description="Tackle rugged terrains and ride 50km on mountain trails this week to earn the 'Trailblazer' badge and showcase your off-road skills."></ChallengeBanner>
+			<ChallengeBanner badge="/badges/trailblazer.png" icon="/icons/mountainbike.svg" title="Conquer the Trails - 50km Mountain Biking" description="Tackle rugged terrains and ride 50km on mountain trails this week to earn the 'Trailblazer' badge and showcase your off-road skills."></ChallengeBanner>
+			<ChallengeBanner badge="/badges/trailblazer.png" icon="/icons/mountainbike.svg" title="Conquer the Trails - 50km Mountain Biking" description="Tackle rugged terrains and ride 50km on mountain trails this week to earn the 'Trailblazer' badge and showcase your off-road skills."></ChallengeBanner>
+			<ChallengeBanner badge="/badges/trailblazer.png" icon="/icons/mountainbike.svg" title="Conquer the Trails - 50km Mountain Biking" description="Tackle rugged terrains and ride 50km on mountain trails this week to earn the 'Trailblazer' badge and showcase your off-road skills."></ChallengeBanner>
+			<ChallengeBanner badge="/badges/trailblazer.png" icon="/icons/mountainbike.svg" title="Conquer the Trails - 50km Mountain Biking" description="Tackle rugged terrains and ride 50km on mountain trails this week to earn the 'Trailblazer' badge and showcase your off-road skills."></ChallengeBanner>
+			<ChallengeBanner badge="/badges/trailblazer.png" icon="/icons/mountainbike.svg" title="Conquer the Trails - 50km Mountain Biking" description="Tackle rugged terrains and ride 50km on mountain trails this week to earn the 'Trailblazer' badge and showcase your off-road skills."></ChallengeBanner>
+			<ChallengeBanner badge="/badges/trailblazer.png" icon="/icons/mountainbike.svg" title="Conquer the Trails - 50km Mountain Biking" description="Tackle rugged terrains and ride 50km on mountain trails this week to earn the 'Trailblazer' badge and showcase your off-road skills."></ChallengeBanner>
+			<ChallengeBanner badge="/badges/trailblazer.png" icon="/icons/mountainbike.svg" title="Conquer the Trails - 50km Mountain Biking" description="Tackle rugged terrains and ride 50km on mountain trails this week to earn the 'Trailblazer' badge and showcase your off-road skills."></ChallengeBanner>
+		</div>
+		<div class="border border-base-300 bg-base-200 rounded-lg px-5 py-4 h-min order-1 lg:order-2">
+			<h3 class="text-xl font-semibold flex gap-4 items-center"><MixerHorizontal size={24}></MixerHorizontal> Filter</h3>
+		</div>
+	</div>
+</Layout>

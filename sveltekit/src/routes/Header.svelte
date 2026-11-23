@@ -1,0 +1,22 @@
+<script lang="ts">
+import ThemeController from "./ThemeController.svelte";
+
+const { data } = $props();
+const lightTheme = data.theme;
+</script>
+
+<header class="fixed top-0 left-0 w-screen px-4 lg:px-36 py-4 z-50 bg-base-100">
+	<div class="mx-auto flex flex-row justify-between">
+		<a href="/">
+			<img src="/favicon.svg" alt="" class="w-12">
+		</a>
+		<div class="flex flex-row gap-12 items-center">
+			<a href="/challenges" class="font-medium text-lg text-base-content text-opacity-85 tracking-wide hover:text-opacity-100">Challenges</a>
+			<a href="" class="font-medium text-lg text-base-content text-opacity-85 tracking-wide hover:text-opacity-100">Events</a>
+			<a href="" class="font-medium text-lg text-base-content text-opacity-85 tracking-wide hover:text-opacity-100">Routes</a>
+			<a href="" class="font-medium text-lg text-base-content text-opacity-85 tracking-wide hover:text-opacity-100">Stories</a>
+			<a href="" class="font-medium text-lg text-base-content text-opacity-85 tracking-wide hover:text-opacity-100">Gallery</a>
+			<ThemeController {lightTheme}></ThemeController>
+		</div>
+	</div>
+</header>
